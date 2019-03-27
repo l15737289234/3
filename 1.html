@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			*{
+				margin: 0;
+				padding: 0;
+				
+			}
+			.box{
+				width: 600px;
+				height: auto;
+				border: 1px solid gray;
+			}
+			.box textarea{
+				resize: none;
+				width: 580px;
+				margin-left: 10px;
+				margin-top: 10px;
+				height: 78px;
+			}
+			.box button{
+				width: 80px;
+				height: 30px;
+				border: none;
+				color: white;
+				font-weight: 700;
+				border-radius: 2px;
+				margin-left: 512px;
+			}
+			.box ul{
+				list-style: none;
+				
+			}
+			.box ul li{
+				width: 580px;
+				margin-left: 10px;
+				line-height: 30px;
+				border-bottom: 1px dashed gray;
+			}
+			.box ul li a{
+				float: right;
+				text-decoration: none;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				function $(id){
+					return document.getElementById(id);
+				}
+				var ul=document.createElement("ul");
+				var box=$("box");
+				box.appendChild(ul);
+				$("release").onclick=function(){
+					var content=$("release").value;
+					if(content==""){
+						alert("发布内容不嫩为空");
+						return ;//结束该方法
+					}
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div class="box" id="box">
+			<textarea id="content"></textarea>
+			<button id="release">发布</button>
+			<!--<ul>
+				<li>内容<a href="javascript:;">删除</a></li>
+				<li>内容<a href="javascript:;">删除</a></li>
+				<li>内容<a href="javascript:;">删除</a></li>
+				<li>内容<a href="javascript:;">删除</a></li>
+				<li>内容<a href="javascript:;">删除</a></li>
+				
+			</ul>-->
+		</div>
+	</body>
+</html>
